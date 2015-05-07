@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Ionic List Directive</title>
+   
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+  
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+  </head>
+
+  <body ng-controller="MyCtrl">
+    
+    <ion-header-bar class="bar-calm">
+      <div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+      </div>
+      <h1 class="title">Professores</h1>
+      <div class="buttons">
+        <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+            Recarregar
+        </button>
+      </div>
+    </ion-header-bar>
+
+    <ion-content>
+<div class="bar-calm">
+    <a class="item item-avatar" href="#">
+      <img src="https://lh3.googleusercontent.com/-5a9kXYRrKTI/AAAAAAAAAAI/AAAAAAAAADs/GVANGqQS_kg/photo.jpg?sz=50">
+      <h2>Stephen Hawking</h2>
+    <div class="card">
+  <div class="item item-text-wrap">
+    Físico teórico e cosmólogo britânico e um dos mais consagrados cientistas da atualidade. Doutor em cosmologia, foi professor lucasiano de matemática na Universidade de Cambridge , onde hoje encontra-se como professor lucasiano emérito
+  </div>
+</div>
+
+    <a class="item item-avatar" href="#">
+      <img src="http://photos.geni.com/p9/1057/2955/534448379aa6c9df/GodfreyKneller-IsaacNewton-1689_t2.jpg">
+      <h2>Isaac Newton</h2>
+   <div class="card">
+  <div class="item item-text-wrap">
+   Professor de matemática em Cambridge (1669) e entrou para a Royal Society (1672).
+  </div>
+</div>
+    <a class="item item-avatar" href="#">
+      <img src="http://www.factslides.com/imgs/s-Einstein.png">
+      <h2>Albert Einstein</h2>
+<div class="card">
+  <div class="item item-text-wrap">
+    Físico teórico alemão, radicado nos Estados Unidos em 1933, que desenvolveu a teoria da relatividade geral, um dos dois pilares da física moderna (ao lado da mecânica quântica)
+  </div>
+</div>
+    <a class="item item-avatar" href="#">
+      <img src="http://pbs.twimg.com/profile_images/581902805469937664/8Ta-HZZd_normal.jpg">
+      <h2>Juarez Filho</h2>
+   <div class="card">
+  <div class="item item-text-wrap">
+Professor
+  </div>
+</div>
+    <a class="item item-avatar" href="#">
+      <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p50x50/416861_402494433110593_1543051401_n.jpg?oh=3b0344eb16ae381447ed70bab3594704&oe=55D395B4&__gda__=1439021218_0025afb064b6c4a71220f2ae44b020f2">
+      <h2>Steve Jobs</h2>
+    <div class="card">
+  <div class="item item-text-wrap">
+    Inventor, empresário e magnata americano no setor da informática. 
+  </div>
+</div>
+
+    <a class="item item-avatar" href="#">
+      <img src="https://pbs.twimg.com/profile_images/2624930191/2n14ijrkppyaxaeet286_normal.jpeg">
+      <h2>Bill Gates</h2>
+    <div class="card">
+  <div class="item item-text-wrap">
+    Um magnata, filantropo e autor norte-americano, que ficou conhecido por fundar junto com Paul Allen a Microsoft, a maior e mais conhecida empresa de software do mundo em termos de valor de mercado.
+  </div>
+</div>
+
+      <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+      
+      <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+      <div class="bar bar-footer bar-calm">
+  <div class="title"> </div>
+</div>
+  </body>
+</html>
